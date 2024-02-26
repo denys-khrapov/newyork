@@ -1,7 +1,7 @@
 * {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 *,
 *:before,
@@ -22,6 +22,7 @@ body {
   min-width: $minWidth + px;
 }
 body {
+  background-color: var(--White-100);
   color: $mainColor;
   line-height: 1.3;
   font-weight: 400;
