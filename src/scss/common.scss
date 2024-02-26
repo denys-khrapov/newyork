@@ -1,1 +1,21 @@
-// Заголовки, загальні БЕМ блоки та інше...
+.title {
+  color: var(--NY-Black-source);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -4px;
+  &--big {
+    font-size: 64px;
+    @media (min-width: $pc) {
+      font-size: 200px;
+    }
+  }
+  &--medium {
+    font-size: 64px;
+    @media (min-width: $pc) {
+      font-size: 128px;
+    }
+  }
+  &--small {
+    font-size: 64px;
+  }
+}
