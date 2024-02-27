@@ -1,14 +1,64 @@
-//<BUTTONS (a.btn+tab)>
-// Сніппет (HTML): btn
-
-.button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&--fw {
-		width: 100%;
-	}
+a.btn, button.btn, span.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  column-gap: 8px;
+  cursor: pointer;
+  transition: all 0.4s;
+  padding: 14px 16px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: "Inter", sans-serif;
+  &.blocked {
+    pointer-events: none;
+    background: var(--NY-Black-100);
+    color: var(--NY-Black-200);
+    border-color: var(--NY-Black-100);
+  }
+  span {
+    &::after, &::before {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  @media (min-width: $pc) {
+    padding: 21px 20px;
+    &::after {
+      font-size: 24px;
+    }
+  }
+  &--full {
+    background: var(--NY-Black-source);
+    color: var(--NY-Blue-50);
+    &:hover {
+      background: var(--NY-Black-900);
+    }
+    &:active {
+      background: var(--NY-Black-900);
+    }
+  }
+  &--icon {
+    @media (min-width: $pc) {
+      padding: 20px 20px 20px 24px;
+    }
+  }
+  &--empty {
+    padding: 12px 14px;
+    color: var(--NY-Black-source);
+    border: 2px solid var(--NY-Black-source);
+    @media (min-width: $pc) {
+      padding: 18px 18px 18px 22px;
+    }
+    &:hover {
+      background: var(--NY-Black-source);
+      color: var(--NY-Blue-50);
+    }
+    &:active {
+      background: var(--NY-Black-900);
+      outline: 2px solid var(--NY-Black-900);
+    }
+  }
 }

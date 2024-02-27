@@ -131,6 +131,7 @@ body {
 @import "base";
 // Підключення стилів загальних елементів проекту
 @import "common";
+@import "base/forms/button";
 // Підключення стилів окремих блоків
 @import "header";
 @import "blocks/hero";

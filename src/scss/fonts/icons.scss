@@ -19,13 +19,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-._icon-add-line:before {
+._icon-add-line:after {
   content: "\e900";
 }
 ._icon-ArrowLeft:before {
   content: "\e901";
 }
-._icon-ArrowRight:before {
+._icon-ArrowRight:after {
   content: "\e902";
 }
 ._icon-arrow-right-down:before {
@@ -34,7 +34,7 @@
 ._icon-building-2:before {
   content: "\e904";
 }
-._icon-building:before {
+._icon-building:after {
   content: "\e905";
 }
 ._icon-CaretDown:before {
@@ -46,7 +46,7 @@
 ._icon-close-line:before {
   content: "\e908";
 }
-._icon-download-cloud-line:before {
+._icon-download-cloud-line:after {
   content: "\e909";
 }
 ._icon-FilePdf:before {
@@ -73,7 +73,7 @@
 ._icon-pushpin-fill:before {
   content: "\e911";
 }
-._icon-sticky-note-line:before {
+._icon-sticky-note-line:after {
   content: "\e912";
 }
 ._icon-thumb-up-line:before {
