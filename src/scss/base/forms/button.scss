@@ -48,7 +48,7 @@ a.btn, button.btn, span.btn {
       padding: 20px 20px 20px 24px;
     }
   }
-  &--empty {
+  &--empty, &--empty-white {
     padding: 12px 14px;
     color: var(--NY-Black-source);
     border: 2px solid var(--NY-Black-source);
@@ -61,7 +61,24 @@ a.btn, button.btn, span.btn {
     }
     &:active {
       background: var(--NY-Black-900);
-      outline: 2px solid var(--NY-Black-900);
+      border: 2px solid var(--NY-Black-900);
+    }
+  }
+  &--empty-white {
+    padding: 12px 14px;
+    color: var(--White-100);
+    border-color: var(--White-100);
+    @media (min-width: $pc) {
+      padding: 18px 18px 18px 22px;
+    }
+    &:hover {
+      color: var(--NY-Blue-source);
+      background: var(--White-100);
+    }
+    &:active {
+      color: var(--NY-Blue-900);
+      background: var(--NY-Black-50);
+      border-color: var(--NY-Black-50);
     }
   }
 }
