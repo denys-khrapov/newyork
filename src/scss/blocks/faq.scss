@@ -23,9 +23,16 @@
 }
 
 #showMoreBtn {
-  margin-top: 48px;
+  margin-top: 44px;
+  padding: 19px 24px;
   ._icon-add-line {
     transition: all 0.4s;
+  }
+  .btn-text {
+    color: var(--NY-Black-source);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
   }
 }
 #showMoreBtn.active {
@@ -55,6 +62,11 @@
   cursor: pointer;
   transition: all 0.4s;
   padding: 16px 0;
+  > div {
+    @media (min-width: $pc) {
+      width: 46%;
+    }
+  }
   &:after {
     transition: all 0.4s;
   }
@@ -64,8 +76,12 @@
   }
   ._icon-add-line {
     transition: all 0.4s;
+    margin-left: 10px;
     &:after {
-      font-size: 48px;
+      font-size: 32px;
+      @media (min-width: $pc) {
+        font-size: 48px;
+      }
     }
   }
   @media (min-width: $pc) {

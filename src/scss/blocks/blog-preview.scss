@@ -71,7 +71,9 @@
     flex: 1 0 0;
     width: 100%;
     overflow: hidden;
-    margin-bottom: 12px;
+    @media (min-width: $pc) {
+      gap: 23px;
+    }
     h3 {
       color: var(--NY-Terra-source);
       font-size: 16px;
@@ -114,13 +116,16 @@
 .blog__all-link {
   margin: 24px 0 0 auto;
   width: max-content;
+  @media (min-width: $pc) {
+    margin: 48px 0 0 auto;
+  }
 }
 
 .blog__navigation {
   .swiper-button-next, .swiper-button-prev {
     top: -42px;
     @media (min-width: $pc) {
-      top: -56px;
+      top: -88px;
     }
   }
   .swiper-button-prev {
@@ -142,7 +147,7 @@
     left: unset;
     bottom: unset;
     @media (min-width: $pc) {
-      top: -88px;
+      top: -118px;
     }
   }
 }

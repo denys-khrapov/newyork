@@ -23,14 +23,10 @@
       gap: 24px;
       padding-top: 24px;
       @media (min-width: $pc) {
-        display: flex;
-        min-width: 876px;
-        flex-direction: column;
-        align-items: flex-end;
-        flex: 1 0 0;
-        padding-top: 32px;
-        margin-left: auto;
+        flex-direction: row;
+        max-width: 100%;
       }
+
       h2 {
         color: var(--NY-Black-source);
         font-size: 26px;
@@ -42,6 +38,12 @@
           font-size: 64px;
           line-height: 1;
           letter-spacing: -4px;
+            display: flex;
+            min-width: 876px;
+            flex-direction: row;
+            align-items: flex-end;
+            flex: 1 0 0;
+            margin-left: auto;
         }
       }
     }
@@ -196,5 +198,18 @@
   ._icon-add-line {
       transform: rotate(45deg);
       transition: all 0.4s;
+  }
+}
+
+.seo__header-none {
+  display: none;
+  @media (min-width: $pc) {
+    display: flex;
+    height: 64px;
+    min-width: 676px;
+    max-width: 676px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
   }
 }
