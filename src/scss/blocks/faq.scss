@@ -76,6 +76,7 @@
   }
   ._icon-add-line {
     margin-left: 10px;
+    transition: all 0.4s;
     &:after {
       font-size: 32px;
       @media (min-width: $pc) {
