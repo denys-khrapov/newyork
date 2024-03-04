@@ -31,7 +31,7 @@
   }
   // .social__phone
   &__phone {
-    color: var(--NY-Terra-source);
+    color: var(--NY-Black-source);
     font-size: 26px;
     font-weight: 600;
     line-height: 1.2;
@@ -260,14 +260,12 @@
     color: var(--NY-Terra-source);
     &::after, &::before {
       color: var(--NY-Terra-source);
-      background-color: var(--NY-Terra-source);
     }
   }
   &:active {
     color: var(--NY-Terra-300);
     &::after, &::before {
       color: var(--NY-Terra-300);
-      background-color: var(--NY-Terra-300);
     }
   }
   &.blocked {
@@ -275,7 +273,6 @@
     color: var(--NY-Black-100);
     &::after, &::before {
       color: var(--NY-Black-100);
-      background-color: var(--NY-Black-100);
     }
   }
 }
