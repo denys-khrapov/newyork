@@ -16,6 +16,9 @@ a:focus,
 a:active {
   // outline: none;
 }
+:root {
+  --app-height: 100%;
+}
 html,
 body {
   height: 100%;
@@ -34,6 +37,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 input,
 button,

@@ -251,3 +251,31 @@
     }
   }
 }
+.link {
+  transition: all 0.4s;
+  &::after, &::before {
+    transition: all 0.4s;
+  }
+  &:hover {
+    color: var(--NY-Terra-source);
+    &::after, &::before {
+      color: var(--NY-Terra-source);
+      background-color: var(--NY-Terra-source);
+    }
+  }
+  &:active {
+    color: var(--NY-Terra-300);
+    &::after, &::before {
+      color: var(--NY-Terra-300);
+      background-color: var(--NY-Terra-300);
+    }
+  }
+  &.blocked {
+    pointer-events: none;
+    color: var(--NY-Black-100);
+    &::after, &::before {
+      color: var(--NY-Black-100);
+      background-color: var(--NY-Black-100);
+    }
+  }
+}

@@ -1,5 +1,6 @@
 export function main() {
 	initSwiper()
+	menu()
 
 	function initSwiper() {
 		let popularObj = new Swiper('.popular-obj-slider', {
@@ -28,4 +29,34 @@ export function main() {
 			}
 		})
 	}
+
+	function menu() {
+		const buttonOpen = document.querySelector('.header__burger')
+		const menu = document.querySelector('.menu-header')
+		const html = document.querySelector('html')
+		const buttonClose = document.querySelector('.menu-header__close')
+		buttonOpen.addEventListener('click', (e) => {
+			e.preventDefault()
+			menu.classList.toggle('active')
+			if (window.innerWidth <= 676) {
+				html.classList.toggle('lock')
+			}
+		})
+		buttonClose.addEventListener('click', (e) => {
+			e.preventDefault()
+			menu.classList.toggle('active')
+			if (html.classList.contains('lock')) {
+				html.classList.remove('lock')
+			}
+		})
+
+	}
+
+	const appHeight = () => {
+		const doc = document.documentElement
+		doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+	}
+	window.addEventListener('resize', appHeight)
+	appHeight()
+
 }
