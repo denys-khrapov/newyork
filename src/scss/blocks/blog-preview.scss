@@ -37,6 +37,21 @@
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
+  &:hover {
+    .blog__slide-content {
+      h3 {
+        color: var(--NY-Terra-source);
+
+      }
+    }
+  }
+  &:active {
+    .blog__slide-content {
+      h3 {
+        color: var(--NY-Terra-300);
+      }
+    }
+  }
   @media (min-width: $pc) {
     max-width: 544px;
     height: 372px;
@@ -79,6 +94,7 @@
       font-size: 16px;
       font-weight: 700;
       line-height: 1.4;
+      transition: all 0.4s;
       @media (min-width: $pc) {
         color: var(--NY-Black-source);
         font-size: 26px;

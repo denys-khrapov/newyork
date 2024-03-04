@@ -167,6 +167,29 @@
       line-height: 1.2;
       letter-spacing: -1px;
       word-break: break-all;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--NY-Terra-source);
+        transition: all 0.4s;
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+      &:active {
+        color: var(--NY-Black-source);
+        &:before {
+          width: 100%;
+          background-color: var(--NY-Black-source);
+        }
+      }
     }
   }
   ul {
@@ -176,6 +199,8 @@
     li {
       width: 32px;
       height: 32px;
+      position: relative;
+      transition: all 0.4s;
       &:nth-of-type(1) {
         background: #28A8E9;
       }
@@ -191,6 +216,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--NY-Terra-source);
+        transition: all 0.4s;
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+      &:active {
+        color: var(--NY-Black-source);
+        &:before {
+          width: 100%;
+          background-color: var(--NY-Black-source);
+        }
       }
     }
   }

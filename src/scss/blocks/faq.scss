@@ -25,19 +25,20 @@
 #showMoreBtn {
   margin-top: 44px;
   padding: 19px 24px;
-  ._icon-add-line {
-    transition: all 0.4s;
-  }
   .btn-text {
     color: var(--NY-Black-source);
     font-size: 16px;
     font-weight: 700;
     line-height: 1.4;
   }
+  &:hover {
+    span {
+      color: #fff;
+    }
+  }
 }
 #showMoreBtn.active {
   ._icon-add-line {
-    transition: all 0.4s;
     transform: rotate(45deg);
   }
 }
@@ -71,11 +72,9 @@
     transition: all 0.4s;
   }
   &:hover {
-    transition: all 0.4s;
     color: #BC7155;
   }
   ._icon-add-line {
-    transition: all 0.4s;
     margin-left: 10px;
     &:after {
       font-size: 32px;
@@ -133,6 +132,31 @@
     gap: 8px;
     justify-content: flex-end;
     margin-top: 12px;
+    position: relative;
+    width: max-content;
+    margin-left: auto;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--NY-Terra-source);
+      transition: all 0.4s;
+    }
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+    &:active {
+      color: var(--NY-Black-source);
+      &:before {
+        width: 100%;
+        background-color: var(--NY-Black-source);
+      }
+    }
     @media (min-width: $pc) {
       font-size: 26px;
       font-weight: 600;
