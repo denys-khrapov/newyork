@@ -51,7 +51,7 @@
   &__text-box {
     display: flex;
     flex-direction: column;
-    row-gap: 36px;
+    row-gap: 38px;
     @media (min-width: $pc) {
       row-gap: 64px;
     }

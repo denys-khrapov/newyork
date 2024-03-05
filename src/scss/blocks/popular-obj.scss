@@ -50,7 +50,7 @@
     .swiper-button-next, .swiper-button-prev {
       top: -42px;
       @media (min-width: $pc) {
-        top: -56px;
+        top: -88px;
       }
     }
     .swiper-button-prev {
@@ -61,7 +61,7 @@
       }
     }
     .swiper-button-next {
-      right: 87px;
+      right: 89px;
       @media (min-width: $pc) {
         right: 185px;
       }
@@ -72,7 +72,7 @@
       left: unset;
       bottom: unset;
       @media (min-width: $pc) {
-        top: -88px;
+        top: -118px;
       }
     }
   }
@@ -127,6 +127,9 @@
     }
     @media (min-width: $pc) {
       height: 376px;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
     }
   }
   // .slide-popular-obj__btn
@@ -239,7 +242,7 @@
   &__content-box {
     display: flex;
     flex-direction: column;
-    row-gap: 8px;
+    row-gap: 16px;
     @media (min-width: $pc) {
       flex-direction: row;
       align-items: center;
@@ -261,6 +264,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media (min-width: $pc) {
+      min-width: 156px;
+      justify-content: flex-start;
+    }
   }
 }
 .badge {

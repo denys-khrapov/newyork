@@ -40,10 +40,17 @@
       align-items: center;
       flex-direction: row;
       gap: 12px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
     }
     img {
-      width: 76px;
-      height: 29px;
+      width: 57px;
+      height: 20px;
+      @media (min-width: $pc) {
+        width: 76px;
+        height: 29px;
+      }
     }
   }
   // .info-box__right-col

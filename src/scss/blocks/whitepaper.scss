@@ -36,6 +36,9 @@
     padding: 64px 32px;
     height: 100%;
     min-height: 650px;
+    @media (min-width: $pc) {
+      padding: 64px 48px;
+    }
   }
   // .whitepaper__title
   &__title {

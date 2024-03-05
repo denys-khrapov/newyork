@@ -6,6 +6,10 @@
   width: 100vw;
   // .header__container
   &__container {
+    padding: 0 16px;
+    @media (min-width: $pc) {
+      padding: 0 72px;
+    }
   }
   //.header__col
   &__col {

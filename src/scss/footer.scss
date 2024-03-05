@@ -27,7 +27,6 @@
     }
   }
 }
-
 .footer__top {
   display: flex;
   flex-direction: column;
@@ -50,7 +49,6 @@
     }
   }
 }
-
 .footer__bottom {
   display: flex;
   padding: 4px 8px;
@@ -66,7 +64,6 @@
     bottom: 81px;
   }
 }
-
 .footer__top-content-left {
   display: flex;
   min-width: 256px;
@@ -181,7 +178,6 @@
     width: 351px;
   }
 }
-
 .footer__top-content-center {
   display: flex;
   min-width: 256px;
@@ -221,7 +217,6 @@
       }
     }
   }
-
   @media (min-width: $pc) {
     display: flex;
     width: 576px;
@@ -231,7 +226,6 @@
     gap: 44px;
   }
 }
-
 .footer__top-content-right {
   display: flex;
   min-width: 256px;
@@ -272,7 +266,6 @@
     margin-bottom: auto;
   }
 }
-
 .footer__top-lower {
   display: flex;
   align-items: center;
@@ -350,7 +343,7 @@
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
-      line-height:1.4;
+      line-height: 1.4;
       @media (min-width: $pc) {
         font-size: 16px;
       }

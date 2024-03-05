@@ -70,13 +70,14 @@
   }
   // .principles-adv__item
   &__item {
+    opacity: 0;
     &:nth-child(2n) {
       &:not(:last-child) {
         margin-bottom: 48px;
       }
     }
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     @media (min-width: $pc) {
       min-width: 320px;

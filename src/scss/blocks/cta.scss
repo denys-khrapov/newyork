@@ -52,6 +52,7 @@
     @media (min-width: $pc) {
       width: 100%;
       max-width: 876px;
+      row-gap: 64px;
     }
   }
   // .cta__image-holder
@@ -71,6 +72,15 @@
   }
   // .cta__social
   &__social {
+  }
+  .form__input {
+    margin-top: 30px;
+    @media (min-width: $pc) {
+      margin-top: 24px;
+    }
+  }
+  .social__items {
+    row-gap: 13px;
   }
 }
 
