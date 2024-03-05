@@ -353,4 +353,29 @@
     gap: 16px 24px;
   }
 }
+.footer {
+  .menu-list {
+     .menu-item {
+        a {
+          transition: all 0.4s;
+          &:hover {
+            color: var(--NY-Terra-source);
+            &:before {
+              content: none;
+            }
+          }
+          &:active {
+            color: var(--NY-Terra-300);
+            &:before {
+              content: none;
+            }
+          }
+          &.blocked {
+            pointer-events: none;
+            color: var(--NY-Black-100);
+          }
+        }
+     }
+  }
+}
 //====================================================================================================
