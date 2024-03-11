@@ -1,6 +1,6 @@
 export function main() {
-	initSwiper()
-	menu()
+	initSwiper();
+	menu();
 
 	function initSwiper() {
 		let popularObj = new Swiper('.popular-obj-slider', {
@@ -11,16 +11,16 @@ export function main() {
 			pagination: {
 				el: '.popular-obj__nav .swiper-pagination',
 				type: 'fraction',
-				formatFractionCurrent: function(number) {
+				formatFractionCurrent: function (number) {
 					return ('0' + number).slice(-2)
 				},
-				formatFractionTotal: function(number) {
+				formatFractionTotal: function (number) {
 					return ('0' + number).slice(-2)
 				},
-				renderFraction: function(currentClass, totalClass) {
+				renderFraction: function (currentClass, totalClass) {
 					return '<span class="' + currentClass + '"></span>' +
-						'/' +
-						'<span class="' + totalClass + '"></span>'
+							'/' +
+							'<span class="' + totalClass + '"></span>'
 				}
 			},
 			navigation: {
@@ -31,36 +31,35 @@ export function main() {
 	}
 
 	function menu() {
-		const buttonOpen = document.querySelectorAll('.header__burger')
-		const menu = document.querySelector('.menu-header')
-		const html = document.querySelector('html')
-		const buttonClose = document.querySelector('.menu-header__close')
-		console.log(buttonOpen)
+		const buttonOpen = document.querySelectorAll('.header__burger');
+		const menu = document.querySelector('.menu-header');
+		const html = document.querySelector('html');
+		const buttonClose = document.querySelector('.menu-header__close');
 
 		buttonOpen.forEach(button => {
 			button.addEventListener('click', (e) => {
-				e.preventDefault()
-				menu.classList.toggle('active')
+				e.preventDefault();
+				menu.classList.toggle('active');
 				if (window.innerWidth <= 676) {
-					html.classList.toggle('lock')
+					html.classList.toggle('lock');
 				}
 			})
 		})
 		buttonClose.addEventListener('click', (e) => {
-			e.preventDefault()
-			menu.classList.toggle('active')
+			e.preventDefault();
+			menu.classList.toggle('active');
 			if (html.classList.contains('lock')) {
-				html.classList.remove('lock')
+				html.classList.remove('lock');
 			}
 		})
 
 	}
 
 	const appHeight = () => {
-		const doc = document.documentElement
-		doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+		const doc = document.documentElement;
+		doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 	}
-	window.addEventListener('resize', appHeight)
-	appHeight()
+	window.addEventListener('resize', appHeight);
+	appHeight();
 
 }
