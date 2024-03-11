@@ -295,3 +295,105 @@
   .breadcrumb_last {
   }
 }
+.cloth {
+  // .cloth--privacy
+  &--privacy {
+  }
+  // .cloth__container
+  &__container {
+  }
+  // .cloth__text-holder
+  &__text-holder {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+.cloth {
+  padding: 96px 0;
+  @media (min-width: $pc) {
+    padding: 160px 0;
+  }
+  h2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    align-self: stretch;
+    overflow: hidden;
+    color: var(--NY-Black-source);
+    text-overflow: ellipsis;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -4px;
+    overflow-wrap: anywhere;
+  }
+  h3 {
+    color: var(--NY-Black-source);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+  }
+  // .cloth--privacy
+  &--privacy {
+  }
+  // .cloth__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 64px);
+      height: 1px;
+      background: var(--NY-Black-200);
+    }
+    @media (min-width: $pc) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      column-gap: 24px;
+      &::before {
+        width: calc(100% - 144px);
+      }
+    }
+  }
+  // .cloth__left-col
+  &__left-col {
+    @media (min-width: $pc) {
+      flex: 1 0 0;
+      max-width: 676px;
+      min-width: 676px;
+    }
+  }
+  // .cloth__right-col
+  &__right-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    @media (min-width: $pc) {
+      flex: 1 0 0;
+      min-width: 876px;
+    }
+  }
+  // .cloth__text-box
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  // .cloth__text-holder
+  &__text-holder {
+    font-size: 16px;
+    line-height: 1.4;
+    @media (min-width: $pc) {
+      font-size: $fontSize;
+      line-height: 1.3;
+      letter-spacing: -0.4px;
+    }
+  }
+}
