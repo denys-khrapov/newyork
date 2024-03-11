@@ -3,6 +3,9 @@
   &--privacy {
     min-height: 470px;
     background: var(--NY-Blue-source);
+    @media (min-width: $pc) {
+      min-height: 680px;
+    }
     .breadcrumbs, .hero__title-sm {
       color: var(--NY-Blue-50);
     }
