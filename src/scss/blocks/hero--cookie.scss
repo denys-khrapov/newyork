@@ -1,16 +1,18 @@
 .hero {
-  // .hero--privacy
-  &--privacy {
-    min-height: 470px;
-    background: var(--NY-Blue-source);
+  // .hero--cookie
+  &--cookie {
+    min-height: 548px;
+    background: var(--NY-Blue-100);
     .breadcrumbs, .hero__title-sm {
-      color: var(--NY-Blue-50);
+      color: var(--NY-Black-source);
     }
     .hero__text-holder {
-      color: var(--NY-Blue-200);
     }
     .hero__icon-holder {
-      color: var(--NY-Blue-50);
+      color: var(--NY-Black-source);
+    }
+    @media (min-width: $pc) {
+      border-radius: 53px 53px 128px 53px;
     }
   }
   // .hero__container
