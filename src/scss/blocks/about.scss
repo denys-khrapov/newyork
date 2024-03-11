@@ -4,8 +4,10 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    padding: 0;
     color: var(--NY-Blue-50);
+    &.container {
+      padding: 0;
+    }
   }
   // .about__left-col
   &__left-col {

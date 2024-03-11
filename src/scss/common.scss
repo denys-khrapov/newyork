@@ -275,3 +275,23 @@
     }
   }
 }
+.breadcrumbs {
+  font-family: $fontFamily;
+  font-size: 16px;
+  line-height: 1.4;
+  // .breadcrumbs__container
+  &__container {
+    & > span {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  .brDevider {
+    display: flex;
+    align-items: center;
+  }
+  .breadcrumb_last {
+  }
+}

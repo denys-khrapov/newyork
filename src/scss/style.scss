@@ -137,6 +137,7 @@ body {
 // Підключення стилів окремих блоків
 @import "header";
 @import "blocks/hero";
+@import "blocks/hero--privacy";
 @import "blocks/info-box";
 @import "blocks/introduction";
 @import "blocks/about";

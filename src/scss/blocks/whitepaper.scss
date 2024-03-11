@@ -2,9 +2,11 @@
   // .whitepaper__container
   &__container {
     max-width: 100%;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
+    &.container {
+      padding: 0;
+    }
   }
   // .whitepaper__left-col
   &__left-col {

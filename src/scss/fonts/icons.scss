@@ -6,7 +6,10 @@
   font-style: normal;
   font-display: block;
 }
-[class^="_icon-"], [class*=" _icon-"] {
+[class^="_icon-"]::before,
+[class^="_icon-"]::after,
+[class*=" _icon-"]::before,
+[class*=" _icon-"]::after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icons" !important;
   speak: never;
@@ -21,6 +24,15 @@
 }
 ._icon-add-line:after {
   content: "\e900";
+}
+._icon-arrow-down-line:before {
+  content: "\e918";
+}
+._icon-filter-line:before {
+  content: "\e916";
+}
+._icon-filter-off-line:before {
+  content: "\e917";
 }
 ._icon-ArrowLeft:before {
   content: "\e901";

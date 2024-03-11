@@ -31,16 +31,20 @@ export function main() {
 	}
 
 	function menu() {
-		const buttonOpen = document.querySelector('.header__burger')
+		const buttonOpen = document.querySelectorAll('.header__burger')
 		const menu = document.querySelector('.menu-header')
 		const html = document.querySelector('html')
 		const buttonClose = document.querySelector('.menu-header__close')
-		buttonOpen.addEventListener('click', (e) => {
-			e.preventDefault()
-			menu.classList.toggle('active')
-			if (window.innerWidth <= 676) {
-				html.classList.toggle('lock')
-			}
+		console.log(buttonOpen)
+
+		buttonOpen.forEach(button => {
+			button.addEventListener('click', (e) => {
+				e.preventDefault()
+				menu.classList.toggle('active')
+				if (window.innerWidth <= 676) {
+					html.classList.toggle('lock')
+				}
+			})
 		})
 		buttonClose.addEventListener('click', (e) => {
 			e.preventDefault()
