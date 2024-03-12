@@ -245,8 +245,14 @@
   .btn {
     margin-top: 8px;
     align-self: flex-end;
+    &::after {
+      font-size: 18px;
+    }
     @media (min-width: $pc) {
       margin-top: 24px;
+      &::after {
+        font-size: 24px;
+      }
     }
   }
 }

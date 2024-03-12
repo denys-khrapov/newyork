@@ -1,0 +1,123 @@
+.cta-contact {
+  padding: 0;
+  // .cta-contact__container
+  &__container {
+    display: flex;
+    max-width: 100%;
+    padding: 0;
+  }
+  // .cta-contact__left-col
+  &__left-col {
+    display: none;
+    @media (min-width: $pc) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--NY-Blue-900);
+      flex: 1 0 0;
+    }
+  }
+  // .cta-contact__right-col
+  &__right-col {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: var(--NY-Blue-source);
+    @media (min-width: $pc) {
+      flex-direction: column;
+      flex: 1 0 0;
+    }
+  }
+  // .cta-contact__main-title
+  &__main-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    align-self: stretch;
+    overflow: hidden;
+    color: var(--White-100);
+    text-overflow: ellipsis;
+    font-size: 128px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -4px;
+    padding: 0 64px;
+  }
+  // .cta-contact__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    padding: 48px 32px 64px;
+    min-width: 320px;
+    flex: 1 0 0;
+    @media (min-width: $pc) {
+      row-gap: 64px;
+      padding: 48px 64px;
+      width: 100%;
+    }
+  }
+  // .cta-contact__text-holder
+  &__text-holder {
+    color: var(--NY-Black-50);
+    letter-spacing: -0.4px;
+    @media (min-width: $pc) {
+      font-size: 26px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+  }
+  // .cta-contact__title
+  &__title {
+    color: var(--NY-Black-50);
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -4px;
+    overflow-wrap: anywhere;
+  }
+  // .cta-contact__form-holder
+  &__form-holder {
+    padding: 48px 32px;
+    min-width: 320px;
+    flex: 1 0 0;
+    background: var(--NY-Black-50);
+    input {
+      background: var(--NY-Black-50);
+    }
+    @media (min-width: $pc) {
+      padding: 48px 64px;
+      width: 100%;
+    }
+  }
+}
+.container {
+}
+.form {
+  // .form__inner
+  &__inner {
+  }
+  // .form__input-holder
+  &__input-holder {
+    // .form__input-holder--name
+    &--name {
+    }
+    // .form__input-holder--phone
+    &--phone {
+    }
+  }
+  // .form__input
+  &__input {
+  }
+}
+.btn {
+  // .btn--full
+  &--full {
+  }
+  // .btn--icon
+  &--icon {
+  }
+}
+._icon-Phone-Calling-2 {
+}
