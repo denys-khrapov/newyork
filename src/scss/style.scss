@@ -137,6 +137,7 @@ body {
 // Підключення стилів окремих блоків
 @import "header";
 @import "blocks/hero";
+@import "blocks/hero--contact";
 @import "blocks/hero--privacy";
 @import "blocks/hero--cookie";
 @import "blocks/hero--404";

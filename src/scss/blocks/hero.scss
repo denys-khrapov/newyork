@@ -72,6 +72,20 @@
   // .hero__text-box
   &__text-box {
   }
+  // .hero__text-holder
+  &__text-holder {
+    letter-spacing: -0.4px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+      @media (min-width: $pc) {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
   // .hero__container
   &__container {
     padding: 0 16px;
