@@ -1,0 +1,68 @@
+.faq-main {
+  padding: 48px 0;
+  // .faq-main__container
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 24px;
+    @media (min-width: $pc) {
+      flex-direction: row;
+      row-gap: 48px;
+    }
+  }
+  // .faq-main__left-col
+  &__left-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    @media (min-width: $pc) {
+      padding-right: 48px;
+      row-gap: 32px;
+      min-width: 676px;
+      max-width: 676px;
+      flex: 1 0 0;
+    }
+  }
+  // .faq-main__title
+  &__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    align-self: stretch;
+    overflow: hidden;
+    color: var(--NY-Black-source);
+    text-overflow: ellipsis;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+    @media (min-width: $pc) {
+      font-size: 64px;
+      line-height: 1;
+      letter-spacing: -4px;
+    }
+  }
+  // .faq-main__right-col
+  &__right-col {
+    @media (min-width: $pc) {
+      flex: 1 0 0;
+      min-width: 876px;
+    }
+  }
+}
+.faq {
+  // .faq__item
+  &__item {
+  }
+  // .faq__header
+  &__header {
+  }
+  // .faq__content
+  &__content {
+  }
+  // .faq__content-text
+  &__content-text {
+  }
+}
