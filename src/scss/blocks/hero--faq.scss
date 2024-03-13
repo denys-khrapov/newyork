@@ -32,8 +32,8 @@
   // .hero__text-holder
   &__text-holder {
   }
-  // .hero__bg-contact-holder
-  &__bg-contact-holder {
+  // .hero__bg-faq-holder
+  &__bg-faq-holder {
     position: absolute;
     top: 0;
     left: 0;
@@ -55,6 +55,14 @@
       height: 100%;
       object-fit: cover;
       border-radius: 0 0 48px 0;
+    }
+    @media (min-width: $pc) {
+      &::before {
+        border-radius: 0 0 128px 0;
+      }
+      img {
+        border-radius: 0 0 128px 0;
+      }
     }
   }
 }

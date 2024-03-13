@@ -41,16 +41,10 @@
       object-fit: cover;
       border-radius: 0 0 48px 0;
     }
+    @media (min-width: $pc) {
+      img {
+        border-radius: 0 0 128px 0;
+      }
+    }
   }
-}
-.container {
-}
-.breadcrumbs {
-  // .breadcrumbs__container
-  &__container {
-  }
-}
-.brDevider {
-}
-.breadcrumb_last {
 }

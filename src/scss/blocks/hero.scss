@@ -72,6 +72,12 @@
   // .hero__text-box
   &__text-box {
   }
+  // .hero__date
+  &__date {
+    text-align: left;
+    color: var(--NY-Blue-600);
+    letter-spacing: -0.4px;
+  }
   // .hero__text-holder
   &__text-holder {
     letter-spacing: -0.4px;
