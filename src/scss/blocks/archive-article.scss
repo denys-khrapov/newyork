@@ -1,0 +1,112 @@
+.archive-article {
+  padding: 32px 0;
+  // .archive-article__container
+  &__container {
+  }
+  // .archive-article__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media (min-width: $pc) {
+      gap: 96px;
+    }
+  }
+  // .archive-article__item
+  &__item {
+    flex: 1 0 0;
+    min-width: 256px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    position: relative;
+    border-top: 1px solid var(--NY-Black-source);
+    border-bottom: 1px solid var(--NY-Black-source);
+    transition: border 0.4s;
+    @media (min-width: 600px) {
+      max-width: calc(50% - 12px);
+    }
+    @media (min-width: $pc) {
+      max-width: calc(50% - 48px);
+      min-width: 376px;
+      flex-direction: row;
+      column-gap: 24px;
+      border-top: 1px solid var(--NY-Black-200);
+      border-bottom: 1px solid var(--NY-Black-200);
+      &:hover {
+        border-top: 1px solid var(--NY-Black-source);
+        border-bottom: 1px solid var(--NY-Black-source);
+        .archive-article__title {
+          color: var(--NY-Terra-source);
+        }
+      }
+    }
+    @media (min-width: 1464px) {
+      max-width: calc(33.333% - 96px);
+    }
+  }
+  // .archive-article__left-col
+  &__left-col {
+    @media (min-width: $pc) {
+      flex: 1 0 0;
+    }
+  }
+  // .archive-article__image-holder
+  &__image-holder {
+    width: 100%;
+    height: 276px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    @media (min-width: $pc) {
+      height: 324px;
+    }
+  }
+  // .archive-article__right-col
+  &__right-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    min-height: 217px;
+    @media (min-width: $pc) {
+      flex: 1 0 0;
+      row-gap: 24px;
+      min-height: 324px;
+      max-height: 324px;
+    }
+  }
+  // .archive-article__title
+  &__title {
+    color: var(--NY-Terra-source);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: color 0.4s;
+    @media (min-width: $pc) {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      color: var(--NY-Black-source);
+    }
+  }
+  // .archive-article__text-holder
+  &__text-holder {
+    color: rgba(0, 13, 16, 0.80);
+    font-size: 16px;
+    line-height: 1.4;
+    max-height: 183px;
+    overflow: hidden;
+    @media (min-width: $pc) {
+      font-size: $fontSize;
+      line-height: 1.3;
+      letter-spacing: -0.4px;
+      max-height: 262px;
+      overflow-wrap: anywhere;
+    }
+  }
+}

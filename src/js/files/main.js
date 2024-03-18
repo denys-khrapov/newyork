@@ -59,7 +59,33 @@ export function main() {
 		const doc = document.documentElement;
 		doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 	}
-	window.addEventListener('resize', appHeight);
 	appHeight();
+
+	function adjustArticleTextHeight() {
+		document.querySelectorAll('.archive-article__item').forEach(item => {
+			if (window.matchMedia('(max-width: 1279px)').matches) {
+				const title = item.querySelector('.archive-article__title');
+				const textHolder = item.querySelector('.archive-article__text-holder');
+				const titleHeight = title.scrollHeight;
+				const textHolderMaxHeight = 205;
+				const maxTextHeight = textHolderMaxHeight - titleHeight;
+				textHolder.style.maxHeight = `${maxTextHeight > 0 ? maxTextHeight : 0}px`;
+			} else {
+				const title = item.querySelector('.archive-article__title');
+				const textHolder = item.querySelector('.archive-article__text-holder');
+				const titleHeight = title.scrollHeight;
+				console.log(titleHeight)
+				const textHolderMaxHeight = 281;
+				const maxTextHeight = textHolderMaxHeight - titleHeight;
+				textHolder.style.maxHeight = `${maxTextHeight > 0 ? maxTextHeight : 0}px`;
+			}
+		});
+	}
+
+	window.addEventListener('load', adjustArticleTextHeight);
+	window.addEventListener('resize', () => {
+		appHeight();
+		adjustArticleTextHeight();
+	})
 
 }

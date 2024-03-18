@@ -5,7 +5,7 @@
   padding: 48px 0;
   flex-direction: column;
   align-items: center;
-  background: #FFF;
+  background: #FFFFFF;
   @media (min-width: $pc) {
     padding: 96px 0;
     align-items: flex-start;
@@ -21,7 +21,6 @@
     }
   }
 }
-
 #showMoreBtn {
   margin-top: 44px;
   padding: 19px 24px;
@@ -33,7 +32,7 @@
   }
   &:hover {
     span {
-      color: #fff;
+      color: #FFFFFF;
     }
   }
 }
@@ -42,7 +41,6 @@
     transform: rotate(45deg);
   }
 }
-
 .faq__item {
   border-bottom: 1px solid var(--NY-Black-200);
   width: 100%;
@@ -95,7 +93,6 @@
   color: #BC7155;
   transition: all 0.4s;
 }
-
 .faq__header.active {
   ._icon-add-line {
     color: #BC7155;
@@ -103,7 +100,6 @@
     transition: all 0.4s;
   }
 }
-
 .faq__content {
   padding-top: 16px;
   padding-bottom: 16px;
@@ -174,26 +170,6 @@
     padding-bottom: 24px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .faq__content {
   display: none;
 }

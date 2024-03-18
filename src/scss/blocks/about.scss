@@ -178,6 +178,11 @@
   display: flex;
   flex-direction: column;
   row-gap: 2px;
+  img {
+    width: 100%;
+    max-width: 24px;
+    height: 24px;
+  }
   // .person__name
   &__name {
     font-weight: 500;
