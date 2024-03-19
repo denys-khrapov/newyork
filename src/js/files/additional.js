@@ -1,12 +1,10 @@
 export function additional() {
 // Викликати функцію для налаштування FAQ
-	setupFAQ();
-	seo();
 	blogSliders();
-	feedback();
 	feedbackSliders()
 
-	function setupFAQ() {
+	jQuery(document).ready(function ($) {
+		function setupFAQ() {
 		var faqBox = $('.faq__box');
 		var showMoreBtn = $('#showMoreBtn');
 		var isExpanded = false; // Track the state for showMoreBtn
@@ -39,14 +37,45 @@ export function additional() {
 
 	}
 
-	function seo() {
-		$('#seo__btn').click(function () {
-			$('.seo__main').slideToggle(300);
-			$(this).toggleClass('active');
-			var buttonText = $(this).hasClass('active') ? 'СВЕРНУТЬ' : 'РАЗВЕРНУТЬ';
-			$(this).find('.btn-text').text(buttonText);
-		});
-	}
+		function seo() {
+			$('#seo__btn').click(function () {
+				$('.seo__main').slideToggle(300);
+				$(this).toggleClass('active');
+				var buttonText = $(this).hasClass('active') ? 'СВЕРНУТЬ' : 'РАЗВЕРНУТЬ';
+				$(this).find('.btn-text').text(buttonText);
+			});
+		}
+
+		function feedback() {
+			$('.feedback__btn').click(function () {
+				var targetBlock = $(this).data('target');
+				var $textElement = $('.feedback__text-holder[data-block="' + targetBlock + '"]');
+
+				$textElement.toggleClass('expanded'); // Add or remove 'expanded' class
+
+				var isExpanded = $textElement.hasClass('expanded');
+				var buttonText = isExpanded ? 'СВЕРНУТЬ' : 'РАЗВЕРНУТЬ';
+
+				$(this).find('.btn-text').text(buttonText);
+
+				// Add or remove 'active' class on the button
+				$(this).toggleClass('active', isExpanded);
+
+				if (isExpanded) {
+					$textElement.css('-webkit-line-clamp', 'unset'); // Remove line clamp
+				} else {
+					$textElement.css('-webkit-line-clamp', '6'); // Apply line clamp
+				}
+			});
+		}
+
+		setupFAQ();
+		seo();
+		feedback();
+
+	});// jQuery(document).ready
+
+
 
 	function blogSliders() {
 		let blog = new Swiper('.blog__main', {
@@ -74,29 +103,6 @@ export function additional() {
 				prevEl: '.blog__navigation .swiper-button-prev'
 			}
 		})
-	}
-
-	function feedback() {
-		$('.feedback__btn').click(function () {
-			var targetBlock = $(this).data('target');
-			var $textElement = $('.feedback__item-top-text[data-block="' + targetBlock + '"]');
-
-			$textElement.toggleClass('expanded'); // Add or remove 'expanded' class
-
-			var isExpanded = $textElement.hasClass('expanded');
-			var buttonText = isExpanded ? 'СВЕРНУТЬ' : 'РАЗВЕРНУТЬ';
-
-			$(this).find('.btn-text').text(buttonText);
-
-			// Add or remove 'active' class on the button
-			$(this).toggleClass('active', isExpanded);
-
-			if (isExpanded) {
-				$textElement.css('-webkit-line-clamp', 'unset'); // Remove line clamp
-			} else {
-				$textElement.css('-webkit-line-clamp', '6'); // Apply line clamp
-			}
-		});
 	}
 
 	function feedbackSliders() {

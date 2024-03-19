@@ -1,26 +1,3 @@
-.faq {
-  display: flex;
-  min-width: 320px;
-  max-width: 1279px;
-  padding: 48px 0;
-  flex-direction: column;
-  align-items: center;
-  background: #FFFFFF;
-  @media (min-width: $pc) {
-    padding: 96px 0;
-    align-items: flex-start;
-    max-width: 100%;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .faq__box {
-      width: 100%;
-      display: none;
-    }
-  }
-}
 #showMoreBtn {
   margin-top: 44px;
   padding: 19px 24px;
@@ -41,72 +18,133 @@
     transform: rotate(45deg);
   }
 }
-.faq__item {
-  border-bottom: 1px solid var(--NY-Black-200);
-  width: 100%;
-}
-.faq__item.active {
-  border-bottom: 1px solid var(--NY-Black-source);
-}
-.faq__header {
-  color: var(--NY-Black-source);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1;
+
+.faq {
   display: flex;
+  min-width: 320px;
+  max-width: 1279px;
+  padding: 48px 0;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  cursor: pointer;
-  transition: all 0.4s;
-  padding: 16px 0;
-  > div {
+  background: #FFFFFF;
+  @media (min-width: $pc) {
+    padding: 96px 0;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  // .faq__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .faq__item
+  &__item {
+    border-bottom: 1px solid var(--NY-Black-200);
+    width: 100%;
+  }
+
+  // .faq__item.active
+  &__item.active {
+    border-bottom: 1px solid var(--NY-Black-source);
+  }
+
+  // .faq__header
+  &__header {
+    color: var(--NY-Black-source);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.4s;
+    padding: 16px 0;
+    &:after {
+      transition: all 0.4s;
+    }
+    &:hover {
+      color: #BC7155;
+      ._icon-add-line {
+        &:after {
+          color: #BC7155;
+        }
+      }
+    }
+    ._icon-add-line {
+      margin-left: 10px;
+      transition: all 0.4s;
+      &:after {
+        font-size: 32px;
+        @media (min-width: $pc) {
+          font-size: 48px;
+        }
+      }
+    }
+    @media (min-width: $pc) {
+      font-size: 26px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      padding: 23px 0;
+    }
+  }
+
+  // .faq__header.active
+  &__header.active {
+    color: #BC7155;
+    transition: all 0.4s;
+    ._icon-add-line {
+      color: #BC7155;
+      transform: rotate(45deg);
+      transition: all 0.4s;
+    }
+  }
+
+  // .faq__header-title
+  &__header-title {
     @media (min-width: $pc) {
       width: 46%;
     }
   }
-  &:after {
-    transition: all 0.4s;
-  }
-  &:hover {
-    color: #BC7155;
-  }
-  ._icon-add-line {
-    margin-left: 10px;
-    transition: all 0.4s;
-    &:after {
-      font-size: 32px;
-      @media (min-width: $pc) {
-        font-size: 48px;
-      }
-    }
-  }
-  @media (min-width: $pc) {
+
+  // .faq__content-text
+  &__content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: rgba(0, 13, 16, 0.80);
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: -1px;
-    padding: 24px 0;
   }
-}
-.faq__header.active {
-  color: #BC7155;
-  transition: all 0.4s;
-}
-.faq__header.active {
-  ._icon-add-line {
-    color: #BC7155;
-    transform: rotate(45deg);
-    transition: all 0.4s;
+
+  // .faq__box
+  &__box {
+    width: 100%;
+    display: none;
   }
-}
-.faq__content {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  .faq__content-text {
+
+  // .faq__content
+  &__content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: none;
+    @media (min-width: $pc) {
+      display: none;
+      max-width: 776px;
+      margin-left: auto;
+      padding-top: 0px;
+      padding-bottom: 24px;
+    }
+  }
+
+  // .faq__content-text
+  &__content-text {
     color: rgba(0, 13, 16, 0.80);
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.4;
     @media (min-width: $pc) {
@@ -117,11 +155,12 @@
       padding-top: 0;
     }
   }
-  a {
+
+  // .faq__content-text
+  &__content-link {
     font-family: $fontFamily;
     color: var(--NY-Terra-source);
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.4;
     display: flex;
@@ -163,13 +202,4 @@
       gap: 16px;
     }
   }
-  @media (min-width: $pc) {
-    max-width: 776px;
-    margin-left: auto;
-    padding-top: 10px;
-    padding-bottom: 24px;
-  }
-}
-.faq__content {
-  display: none;
 }
