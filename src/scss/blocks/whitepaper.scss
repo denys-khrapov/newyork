@@ -23,6 +23,17 @@
     @media (min-width: $pc) {
       height: 814px;
     }
+    &--mob {
+      @media (min-width: $pc) {
+        display: none;
+      }
+    }
+    &--desk {
+      display: none;
+      @media (min-width: $pc) {
+        display: block;
+      }
+    }
   }
   // .whitepaper__right-col
   &__right-col {

@@ -131,32 +131,29 @@
       margin-top: -12px;
     }
   }
-  // .hero__bg-bottom-holder
-  &__bg-bottom-holder {
+  // .hero__bg-holder
+  &__bg-holder {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-    height: 100%;
     width: 100%;
-    pointer-events: none;
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 46% 0;
+    height: 100%;
+    &--mob {
+      @media (min-width: $pc) {
+        display: none;
+      }
     }
-    @media (min-width: $pc) {
-      img {
-        object-position: 0 0;
+    &--desk {
+      display: none;
+      @media (min-width: $pc) {
+        display: block;
       }
     }
   }
-  // .hero__bg-top-holder
-  &__bg-top-holder {
+}
+.hero-bg {
+  // .hero-bg__top
+  &__top {
     position: absolute;
     top: 0;
     left: 0;
@@ -164,16 +161,25 @@
     height: 100%;
     width: 100%;
     pointer-events: none;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 46% 0;
-    }
+    object-fit: cover;
+    object-position: 46% 0;
     @media (min-width: $pc) {
-      img {
-        object-position: 0 0;
-      }
+      object-position: 0 0;
+    }
+  }
+  // .hero-bg__bottom
+  &__bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: 46% 0;
+    @media (min-width: $pc) {
+      object-position: 0 0;
     }
   }
 }

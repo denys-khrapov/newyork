@@ -89,7 +89,9 @@
   // .social__item
   &__item {
     cursor: pointer;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 48px;
     height: 56px;
     padding-bottom: 8px;

@@ -131,6 +131,17 @@
         margin-bottom: 40px;
       }
     }
+    &--mob {
+      @media (min-width: $pc) {
+        display: none;
+      }
+    }
+    &--desk {
+      display: none;
+      @media (min-width: $pc) {
+        display: block;
+      }
+    }
   }
   // .slide-popular-obj__btn
   &__btn {
