@@ -59,11 +59,23 @@
   &__box-card-img {
     height: 280px;
     width: 100%;
+    &--mob {
+      display: block;
+    }
+    &--des {
+      display: none;
+    }
     @media (min-width: $pc) {
       justify-content: center;
       height: 376px;
       align-items: center;
       background: var(--NY-Black-50);
+      &--des {
+        display: block;
+      }
+      &--mob {
+        display: none;
+      }
     }
       img {
         object-fit: cover;
