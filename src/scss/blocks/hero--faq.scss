@@ -64,5 +64,16 @@
         border-radius: 0 0 128px 0;
       }
     }
+    &--desk {
+      display: none;
+      @media (min-width: $pc) {
+        display: block;
+      }
+    }
+    &--mob {
+      @media (min-width: $pc) {
+        display: none;
+      }
+    }
   }
 }
