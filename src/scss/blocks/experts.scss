@@ -9,7 +9,7 @@
     padding: 103px 0 96px 0;
     max-width: 100%;
   }
-  &--contact {
+  &--contact, &--company {
     .experts__title {
       font-size: 28px;
       line-height: 1.2;
@@ -23,7 +23,6 @@
       }
     }
   }
-
   // .experts__container
   &__container {
     display: flex;
@@ -32,7 +31,6 @@
     gap: 63px;
     margin: 0 auto;
   }
-
   // .experts__title
   &__title {
     color: var(--NY-Black-source);
@@ -46,7 +44,6 @@
       width: 100%;
     }
   }
-
   // .experts__box
   &__box {
     display: flex;
@@ -56,7 +53,6 @@
     width: 100%;
     flex-wrap: wrap;
   }
-
   // .experts__box-card
   &__box-card {
     display: flex;
@@ -68,7 +64,6 @@
     border-bottom: 1px solid var(--NY-Black-200);
     gap: 32px;
   }
-
   // .experts__box-card-img
   &__box-card-img {
     height: 280px;
@@ -91,13 +86,12 @@
         display: none;
       }
     }
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
-
   // .experts__box-card-content
   &__box-card-content {
     display: flex;
@@ -110,7 +104,6 @@
       width: 100%;
     }
   }
-
   // .experts__box-card-content-text
   &__box-card-content-text {
     display: flex;
@@ -124,7 +117,6 @@
       gap: 24px;
     }
   }
-
   // .experts__box-card-content-text-tittle
   &__box-card-content-text-tittle {
     display: flex;
@@ -137,7 +129,6 @@
       gap: 9px;
     }
   }
-
   // .experts__fullName
   &__fullName {
     color: var(--NY-Black-source);
@@ -151,7 +142,6 @@
       letter-spacing: -1px;
     }
   }
-
   // .experts__jobTitle
   &__jobTitle {
     color: var(--NY-Black-900);
@@ -164,15 +154,11 @@
       letter-spacing: -1px;
     }
   }
-
-  // .experts__experience
-  &__experience {
+  // .experts__text-holder
+  &__text-holder {
     color: var(--NY-Black-900);
     font-size: 16px;
     line-height: 1.4;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     span {
       &:before {
         font-size: 24px;
@@ -182,8 +168,15 @@
       font-size: $fontSize;
       letter-spacing: -0.4px;
     }
+    p {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
   }
-
   // .experts__box-card-content-text-contact
   &__box-card-content-text-contact {
     display: flex;
@@ -197,12 +190,10 @@
       align-items: flex-start;
     }
   }
-
   // .experts__address
   &__address {
     font-style: normal;
   }
-
   // .experts__box-link
   &__box-link {
     color: var(--NY-Terra-source);
@@ -235,66 +226,60 @@
       }
     }
   }
-
   // .experts__social-nav
   &__social-nav {
     display: flex;
     align-items: center;
     gap: 8px;
   }
-
   // .experts__social-nav-item
   &__social-nav-item {
     width: 32px;
     height: 32px;
     position: relative;
     transition: all 0.4s;
-      // .experts__social-nav-item--telegram
-      &--telegram {
-        background: #28A8E9;
-      }
-
-      // .experts__social-nav-item--viber
-      &--viber {
-        background: #675DA9;
-      }
-
-      // .experts__social-nav-item--whatsapp
-      &--whatsapp {
-        background: #0DC143;
-      }
-
-      a {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    // .experts__social-nav-item--telegram
+    &--telegram {
+      background: #28A8E9;
+    }
+    // .experts__social-nav-item--viber
+    &--viber {
+      background: #675DA9;
+    }
+    // .experts__social-nav-item--whatsapp
+    &--whatsapp {
+      background: #0DC143;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--NY-Terra-source);
+      transition: all 0.4s;
+    }
+    &:hover {
       &:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background-color: var(--NY-Terra-source);
-        transition: all 0.4s;
+        width: 100%;
       }
-      &:hover {
-        &:before {
-          width: 100%;
-        }
+    }
+    &:active {
+      color: var(--NY-Black-source);
+      &:before {
+        width: 100%;
+        background-color: var(--NY-Black-source);
       }
-      &:active {
-        color: var(--NY-Black-source);
-        &:before {
-          width: 100%;
-          background-color: var(--NY-Black-source);
-        }
-      }
+    }
   }
-
   // .experts__box-card-container
   &__box-card-container {
     width: 100%;
