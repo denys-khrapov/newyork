@@ -586,3 +586,43 @@
     }
   }
 }
+.wp-pagenavi {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .previouspostslink {
+  }
+  .nextpostslink {
+    margin-right: 16px;
+  }
+  .previouspostslink, .nextpostslink {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (min-width: $pc) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+  .page, .brDevider {
+    color: var(--NY-Black-source);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    @media (min-width: $pc) {
+      font-size: 64px;
+      line-height: 1;
+      letter-spacing: -4px;
+    }
+  }
+  .smaller {
+  }
+  .larger {
+  }
+}

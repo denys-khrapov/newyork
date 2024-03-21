@@ -2,6 +2,9 @@
   padding: 32px 0;
   // .archive-article__container
   &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
   }
   // .archive-article__items
   &__items {
