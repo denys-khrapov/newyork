@@ -152,6 +152,10 @@
     flex-direction: column;
     row-gap: 39px;
   }
+  // .form__radio-holder
+  &__radio-holder {
+    display: flex;
+  }
   // .form__input-holder
   &__input-holder {
     position: relative;

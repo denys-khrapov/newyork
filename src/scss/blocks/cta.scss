@@ -82,7 +82,65 @@
   .social__items {
     row-gap: 13px;
   }
+  .radio-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @media (min-width: $pc) {
+      flex-direction: row;
+      align-items: center;
+    }
+    // .radio-form__left-col
+    &__left-col {
+    }
+    // .radio-form__right-col
+    &__right-col {
+    }
+    // .radio-form__title
+    &__title {
+      color: var(--NY-Black-source);
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -1px;
+    }
+    .badge {
+      display: flex;
+      padding: 8px 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+      input {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+      }
+      input:checked + .badge__link {
+        color: var(--NY-Blue-200);
+        border-color: var(--NY-Blue-200);
+      }
+      &__link {
+        color: $mainColor;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+        cursor: pointer;
+        & + input:checked {
+          background-color: red;
+        }
+        @media (min-width: $pc) {
+          &:hover {
+            color: var(--NY-Blue-200);
+          }
+        }
+      }
+    }
+  }
 }
+
+
+
+
+
 
 
 
