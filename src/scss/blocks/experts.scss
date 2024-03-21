@@ -9,6 +9,20 @@
     padding: 103px 0 96px 0;
     max-width: 100%;
   }
+  &--contact {
+    .experts__title {
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      @media (min-width: $pc) {
+        max-width: 628px;
+        word-break: normal;
+        font-size: 64px;
+        line-height: 1;
+        letter-spacing: -4px;
+      }
+    }
+  }
 
   // .experts__container
   &__container {
