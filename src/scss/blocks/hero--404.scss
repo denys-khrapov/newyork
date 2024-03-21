@@ -77,5 +77,16 @@
         border-radius: 0 0 128px 0;
       }
     }
+    &--mob {
+      @media (min-width: $pc) {
+        display: none;
+      }
+    }
+    &--desk {
+      display: none;
+      @media (min-width: $pc) {
+        display: block;
+      }
+    }
   }
 }
