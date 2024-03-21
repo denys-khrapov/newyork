@@ -1,12 +1,20 @@
 .hero {
   // .hero--contact
   &--contact {
-    min-height: 484px;
+    min-height: 312px;
+    @media (min-width: $pc) {
+      min-height: 374px;
+      height: auto;
+      max-height: none;
+    }
     .hero__title-sm, .breadcrumbs {
       color: var(--NY-Blue-50);
     }
     .hero__text-holder {
       color: var(--NY-Blue-200);
+    }
+    .hero__title-md {
+      text-align: left;
     }
   }
   // .hero--global
