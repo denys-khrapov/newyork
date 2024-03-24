@@ -16,6 +16,9 @@
   &__title {
     overflow-wrap: anywhere;
   }
+  // .principles__suptitle
+  &__suptitle {
+  }
   // .principles__content
   &__content {
     display: flex;
@@ -27,6 +30,9 @@
   }
   // .principles__left-col
   &__left-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
     flex: 1 0 0;
     min-width: 256px;
     @media (min-width: $pc) {
@@ -44,6 +50,7 @@
       margin-bottom: 24px;
     }
     span {
+      color: var(--NY-Terra-source);
       font-weight: 600;
     }
     @media (min-width: $pc) {

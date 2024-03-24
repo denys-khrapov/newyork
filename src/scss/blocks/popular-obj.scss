@@ -3,6 +3,56 @@
   @media (min-width: $pc) {
     padding: 96px 0;
   }
+  &--catalog-article {
+    padding: 0;
+    .popular-obj__container {
+      padding: 0;
+    }
+    .slide-popular-obj__image-holder {
+      height: 276px;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+      @media (min-width: $pc) {
+        height: 324px;
+      }
+    }
+    .slide-popular-obj {
+      height: 100%;
+      &__btn {
+        @media (min-width: $pc) {
+          display: none;
+        }
+      }
+      @media (min-width: $pc) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        .pushpin {
+          display: none;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: var(--NY-Black-200);
+          width: 100%;
+          height: 1px;
+        }
+        &::before, &::after {
+          transition: all 0.4s;
+        }
+        &:hover {
+          &::before, &::after {
+            background-color: var(--NY-Black-source);
+          }
+        }
+      }
+    }
+    .slide-popular-obj__link {
+      z-index: 10;
+    }
+  }
   // .popular-obj__container
   &__container {
     max-width: 100%;
