@@ -85,28 +85,32 @@ if (document.querySelector('.principles-adv__item')) {
 	})
 }
 
-if (document.querySelector('.cta__left-col')) {
-	gsap.from('.cta__left-col', {
-		scrollTrigger: {
-			trigger: '.cta__container'
-		},
-		x: -300,
-		opacity: 0,
-		duration: 0.5,
-		delay: 0.5
-	})
+if (!document.querySelector('.cta').classList.contains('no-animation')) {
+	if (document.querySelector('.cta__left-col')) {
+		gsap.from('.cta__left-col', {
+			scrollTrigger: {
+				trigger: '.cta__container'
+			},
+			x: -300,
+			opacity: 0,
+			duration: 0.5,
+			delay: 0.5
+		})
+	}
+	if (document.querySelector('.cta__right-col')) {
+		gsap.from('.cta__right-col', {
+			scrollTrigger: {
+				trigger: '.cta__container'
+			},
+			x: 300,
+			opacity: 0,
+			duration: 0.5,
+			delay: 0.5
+		})
+	}
 }
-if (document.querySelector('.cta__right-col')) {
-	gsap.from('.cta__right-col', {
-		scrollTrigger: {
-			trigger: '.cta__container'
-		},
-		x: 300,
-		opacity: 0,
-		duration: 0.5,
-		delay: 0.5
-	})
-}
+
+
 if (document.querySelector('.popular-obj__title')) {
 	gsap.from('.popular-obj__title', {
 		scrollTrigger: {

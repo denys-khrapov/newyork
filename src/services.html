@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Services"
+})
+
+<body>
+<div id="wrapper" class="wrapper">
+	@@include('html/_header-white.htm',{})
+	<main class="page">
+		@@include('html/blocks/_hero--services.htm',{})
+		@@include('html/blocks/_cloth--services.htm',{})
+		<section class="cta cta--services" id="cta-section">
+			<div class="cta__container container">
+				<div class="cta__left-col">
+					<h2 class="cta__title title title--small">
+						Есть вопрос по недвижимости
+						<span>Нью-Йорка</span>?
+					</h2>
+					<div class="cta__text-holder">
+						<p>Укажите, как с вами связаться:</p>
+					</div>
+					<div class="cta__form-holder">
+						<form class="form" action="#">
+							<div class="form__inner">
+								<div class="form__input-holder form__input-holder--name">
+							<span data-name="name-client">
+								<label for="nameClient">
+										Ваше имя*
+										<input id="nameClient" class="form__input" placeholder="Например, Мария" type="text" name="name-client">
+								</label>
+							</span>
+								</div>
+								<div class="form__input-holder form__input-holder--phone">
+            <span data-name="phone-client">
+							<label for="phoneClient">
+									Ваш телефон*
+                	<input id="phoneClient" class="form__input" placeholder="+1" type="tel" name="phone-client">
+								</label>
+            </span>
+								</div>
+								<div class="radio-form">
+									<div class="radio-form__left-col">
+										<h3 class="radio-form__title">Мессенджер: </h3>
+									</div>
+									<div class="radio-form__right-col badge">
+										<div class="form__radio-holder">
+											<input type="radio" id="telegram" name="messenger" value="telegram">
+											<label class="badge__link" for="telegram">Telegram</label>
+										</div>
+										<div class="form__radio-holder">
+											<input type="radio" id="whatsapp" name="messenger" value="whatsapp">
+											<label class="badge__link" for="whatsapp">WhatsApp</label>
+										</div>
+										<div class="form__radio-holder">
+											<input type="radio" id="viber" name="messenger" value="viber">
+											<label class="badge__link" for="viber">Viber</label>
+										</div>
+									</div>
+								</div>
+								<button class="btn btn--full" type="submit">Свяжитесь со мной</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="cta__right-col">
+					<div class="cta__image-holder">
+						<img src="../img/cta-img.png" width="752" height="552" alt="image">
+					</div>
+					<div class="cta__social social">
+						<h3 class="social__title">Свяжитесь с нами сейчас:</h3>
+						<div class="social__items">
+							<a class="social__phone" href="tel:+19178680747">+1 917 868 0747</a>
+							<div class="social__messengers">
+								<a class="social__item" href="#">
+									<div class="social__icon-holder">
+										<img src="../img/icon-telegram-bg.svg" width="49" height="49" alt="telegram">
+									</div>
+								</a>
+								<a class="social__item" href="#"><img src="../img/icon-viber-bg.svg" width="49" height="49" alt="viber"></a>
+								<a class="social__item" href="#"><img src="../img/icon-whatsapp-bg.svg" width="49" height="49" alt="whatsapp"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('html/_footer.htm',{})
+</div>
+@@include('html/_js.htm',{})
+</body>
+
+</html>
