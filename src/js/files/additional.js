@@ -5,37 +5,29 @@ export function additional() {
 
 	jQuery(document).ready(function ($) {
 		function setupFAQ() {
-		var faqBox = $('.faq__box');
-		var showMoreBtn = $('#showMoreBtn');
-		var isExpanded = false; // Track the state for showMoreBtn
+			var faqBox = $('.faq__box');
+			var showMoreBtn = $('#showMoreBtn');
+			var isExpanded = false; // Track the state for showMoreBtn
 
-		// Додати подію на кнопку "Показати більше"
-		showMoreBtn.click(function () {
-			faqBox.slideToggle(300); // Adjust the duration as needed
-			isExpanded = !isExpanded;
+			// Додати подію на кнопку "Показати більше"
+			showMoreBtn.click(function () {
+				faqBox.slideToggle(300); // Adjust the duration as needed
+				isExpanded = !isExpanded;
 
-			var buttonText = isExpanded ? 'СВЕРНУТЬ' : 'РАЗВЕРНУТЬ';
-			$(this).toggleClass('active', isExpanded).find('.btn-text').text(buttonText);
-		});
+				var buttonText = isExpanded ? 'СВЕРНУТЬ' : 'РАЗВЕРНУТЬ';
+				$(this).toggleClass('active', isExpanded).find('.btn-text').text(buttonText);
+			});
 
-		$('.faq__header').click(function () {
-			var faqHeader = $(this);
-			var faqItem = faqHeader.closest('.faq__item');
+			$(document).on('click', '.faq__header', function () {
+				var faqHeader = $(this);
+				var faqItem = faqHeader.closest('.faq__item');
+				faqHeader.toggleClass('active');
+				$('.faq__header').not(faqHeader).removeClass('active');
+				$('.faq__item').not(faqItem).removeClass('active').find('.faq__content').slideUp(300);
+				faqItem.toggleClass('active').find('.faq__content').slideToggle(300);
+			});
 
-			// Toggle 'active' class on clicked header
-			faqHeader.toggleClass('active');
-
-			// Toggle 'active' class on other headers within the document
-			$('.faq__header').not(faqHeader).removeClass('active');
-
-			// Toggle 'active' class on other items within the document
-			$('.faq__item').not(faqItem).removeClass('active').find('.faq__content').slideUp(300);
-
-			// Toggle 'active' class on clicked item and toggle content visibility
-			faqItem.toggleClass('active').find('.faq__content').slideToggle(300);
-		});
-
-	}
+		}
 
 		function seo() {
 			$('#seo__btn').click(function () {
@@ -76,7 +68,6 @@ export function additional() {
 	});// jQuery(document).ready
 
 
-
 	function blogSliders() {
 		let blog = new Swiper('.blog__main', {
 			slidesPerView: 'auto',
@@ -86,16 +77,16 @@ export function additional() {
 			pagination: {
 				el: '.blog__navigation .swiper-pagination',
 				type: 'fraction',
-				formatFractionCurrent: function(number) {
+				formatFractionCurrent: function (number) {
 					return ('0' + number).slice(-2)
 				},
-				formatFractionTotal: function(number) {
+				formatFractionTotal: function (number) {
 					return ('0' + number).slice(-2)
 				},
-				renderFraction: function(currentClass, totalClass) {
+				renderFraction: function (currentClass, totalClass) {
 					return '<span class="' + currentClass + '"></span>' +
-						'/' +
-						'<span class="' + totalClass + '"></span>'
+							'/' +
+							'<span class="' + totalClass + '"></span>'
 				}
 			},
 			navigation: {
@@ -114,16 +105,16 @@ export function additional() {
 			pagination: {
 				el: '.feedback__navigation .swiper-pagination',
 				type: 'fraction',
-				formatFractionCurrent: function(number) {
+				formatFractionCurrent: function (number) {
 					return ('0' + number).slice(-2)
 				},
-				formatFractionTotal: function(number) {
+				formatFractionTotal: function (number) {
 					return ('0' + number).slice(-2)
 				},
-				renderFraction: function(currentClass, totalClass) {
+				renderFraction: function (currentClass, totalClass) {
 					return '<span class="' + currentClass + '"></span>' +
-						'/' +
-						'<span class="' + totalClass + '"></span>'
+							'/' +
+							'<span class="' + totalClass + '"></span>'
 				}
 			},
 			navigation: {

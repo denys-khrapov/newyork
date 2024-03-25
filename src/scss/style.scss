@@ -58,7 +58,6 @@ body {
 }
 // Оболонка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -141,6 +140,7 @@ body {
 @import "blocks/hero--company";
 @import "blocks/hero--article";
 @import "blocks/hero--catalog-article";
+@import "blocks/hero--catalog";
 @import "blocks/hero--privacy";
 @import "blocks/hero--cookie";
 @import "blocks/hero--blog";

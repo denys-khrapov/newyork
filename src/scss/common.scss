@@ -362,13 +362,29 @@
     @media (min-width: $pc) {
       padding: 128px 0 96px;
     }
+    .popular-obj-card__image-holder {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+      @media (min-width: $pc) {
+        height: 324px;
+      }
+    }
+    .popular-obj-card__btn {
+      @media (min-width: $pc) {
+        display: none;
+      }
+    }
+    .popular-obj-card__link {
+      z-index: 10;
+      @media (min-width: $pc) {
+        z-index: 4;
+      }
+    }
     .popular-obj {
       @media (min-width: $pc) {
         padding-top: 120px;
       }
-    }
-    .filter .facetwp-facet {
-      column-gap: 4px;
     }
     .cloth__content {
       row-gap: 58px;
@@ -391,6 +407,7 @@
       row-gap: 32px;
       @media (min-width: $pc) {
         overflow: hidden;
+        max-width: 100%;
       }
     }
     .map {
@@ -408,12 +425,99 @@
         }
       }
     }
+    .badge {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 4px;
+      row-gap: 8px;
+      &__link {
+        padding: 8px 12px;
+      }
+    }
+  }
+  // .cloth--catalog
+  &--catalog {
+    padding: 32px 0;
+    @media (min-width: $pc) {
+      padding: 64px 0;
+    }
+    .cloth__container {
+      row-gap: 32px;
+      @media (min-width: $pc) {
+        row-gap: 0;
+      }
+    }
+    .cloth__content {
+      &::before {
+        display: none;
+      }
+    }
+    .btn {
+      &--filter {
+        margin-left: auto;
+        @media (min-width: $pc) {
+          display: none;
+        }
+      }
+    }
+    .cloth__right-col {
+      @media (min-width: $pc) {
+        row-gap: 64px;
+        min-width: 700px;
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+    .cloth__left-col {
+      @media (min-width: $pc) {
+        max-width: 476px;
+        min-width: auto;
+      }
+    }
+    h3 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 6;
+      align-self: stretch;
+      overflow: hidden;
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -4px;
+    }
+    .cloth__content {
+      @media (min-width: $pc) {
+        column-gap: 124px;
+      }
+    }
   }
   // .cloth__container
   &__container {
     display: flex;
     flex-direction: column;
     row-gap: 64px;
+  }
+  // .cloth__popular-obj-box
+  &__popular-obj-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media (min-width: $pc) {
+      gap: 48px;
+    }
+    .popular-obj-card {
+      min-width: 256px;
+      flex: 1 0 0;
+      @media (min-width: $pc) {
+        min-width: 376px;
+      }
+    }
+    .popular-obj-card__image-holder {
+      height: 276px;
+      @media (min-width: $pc) {
+        height: 376px;
+      }
+    }
   }
   // .cloth__image-holder
   &__image-holder {
@@ -522,6 +626,70 @@
   }
 }
 .filter {
+  &-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    @media (min-width: $pc) {
+      row-gap: 32px;
+      &:not(:last-child) {
+        margin-bottom: 64px;
+      }
+    }
+    &--district {
+      .facetwp-checkbox {
+        &:nth-child(1) {
+          position: relative;
+          display: flex;
+          align-items: center;
+          column-gap: 8px;
+          border: 1px solid var(--NY-Black-50);
+          background: var(--NY-Blue-source);
+          color: var(--NY-Black-50);
+          .facetwp-display-value {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+          }
+          &:hover {
+            color: var(--NY-Blue-200);
+            border-radius: 999px;
+            border: 1px solid var(--NY-Blue-200);
+          }
+          &:active {
+            color: var(--NY-Blue-500);
+          }
+          &::before {
+            content: "";
+            display: block;
+            background-image: url("../img/icon-plus.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            @media (min-width: $pc) {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+    &--desktop-none {
+      @media (min-width: $pc) {
+        display: none;
+      }
+    }
+    &--mobile-none {
+      display: none;
+      @media (min-width: $pc) {
+        display: flex;
+      }
+    }
+  }
   .facetwp-facet {
     display: flex;
     flex-wrap: wrap;
@@ -531,23 +699,22 @@
       row-gap: 16px;
     }
   }
-  .facetwp-facet-tags {
-  }
-  .facetwp-type-radio {
-  }
-  .facetwp-radio {
+  .facetwp-radio, .facetwp-checkbox {
     cursor: pointer;
-    padding: 8px 16px;
+    padding: 5px 16px;
     border-radius: 999px;
     border: 1px solid var(--NY-Black-source);
     transition: all 0.4s;
-    &:hover {
-      border: 1px solid var(--NY-Blue-200);
-      color: var(--NY-Blue-200);
+    @media (min-width: $pc) {
+      padding: 7px 16px;
+      &:hover {
+        border: 1px solid var(--NY-Blue-200);
+        color: var(--NY-Blue-200);
+      }
     }
     &:active {
-      border: 1px solid var(--NY-Blue-200);
-      color: var(--NY-Blue-200);
+      border: 1px solid var(--NY-Blue-500);
+      color: var(--NY-Blue-500);
     }
     &--disabled {
       color: var(--NY-Blue-500);
@@ -557,10 +724,14 @@
   }
   .facetwp-display-value {
     font-family: $fontFamily;
-    font-size: $fontSize;
-    line-height: 1.3;
+    font-size: 16px;
+    line-height: 1.4;
     font-weight: 400;
-    letter-spacing: -0.4px;
+    @media (min-width: $pc) {
+      font-size: $fontSize;
+      line-height: 1.3;
+      letter-spacing: -0.4px;
+    }
   }
   .facetwp-counter {
     display: none;
@@ -706,8 +877,6 @@
 }
 .tooltip {
   position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
   .tooltiptext {
     font-size: 16px;
     visibility: hidden;
@@ -741,6 +910,38 @@
         visibility: visible;
         opacity: 1;
       }
+    }
+  }
+}
+.badge {
+  position: relative;
+  z-index: 5;
+  // .badge__link
+  &__link {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 7px 11px;
+    border-radius: 999px;
+    border: 1px solid var(--NY-Black-source);
+    transition: all 0.4s;
+    &:hover {
+      color: var(--NY-Blue-200);
+      border-color: var(--NY-Blue-200);
+    }
+    &:active {
+      color: var(--NY-Blue-500);
+      border-color: var(--NY-Blue-500);
+    }
+    @media (min-width: $pc) {
+      font-size: $fontSize;
+      line-height: 1.3;
+      letter-spacing: -0.4px;
+      padding: 7px 15px;
+    }
+    &--disabled {
+      cursor: default;
+      color: var(--NY-Blue-200);
+      border: 1px solid var(--NY-Blue-200);
     }
   }
 }

@@ -33,6 +33,23 @@ a.btn, button.btn, span.btn, input.btn {
       }
     }
   }
+  &--filter {
+    color: var(--NY-Black-source);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    transition: color 0.4s;
+    &::before {
+      font-size: 32px;
+    }
+    &:active {
+      color: var(--NY-Terra-300);
+    }
+  }
   &--full {
     background: var(--NY-Black-source);
     color: var(--NY-Blue-50);

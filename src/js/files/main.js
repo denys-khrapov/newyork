@@ -1,6 +1,16 @@
 export function main() {
 	initSwiper();
 	menu();
+	cancelActionBadgeLink();
+
+	function cancelActionBadgeLink() {
+		const badgeLinkDisabled = document.querySelectorAll('.badge__link--disabled');
+		badgeLinkDisabled.forEach((link) => {
+			link.addEventListener('click', function (e) {
+				e.preventDefault();
+			});
+		})
+	}
 
 	function initSwiper() {
 		let popularObj = new Swiper('.popular-obj-slider', {
@@ -74,7 +84,6 @@ export function main() {
 				const title = item.querySelector('.archive-article__title');
 				const textHolder = item.querySelector('.archive-article__text-holder');
 				const titleHeight = title.scrollHeight;
-				console.log(titleHeight)
 				const textHolderMaxHeight = 281;
 				const maxTextHeight = textHolderMaxHeight - titleHeight;
 				textHolder.style.maxHeight = `${maxTextHeight > 0 ? maxTextHeight : 0}px`;
