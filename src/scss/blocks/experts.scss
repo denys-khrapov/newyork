@@ -23,12 +23,21 @@
       }
     }
   }
+  &--service {
+    .experts__title {
+      word-break: normal;
+    }
+    padding: 64px 0 32px;
+    @media (min-width: $pc) {
+      padding: 160px 0 96px;
+    }
+  }
   // .experts__container
   &__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 63px;
+    gap: 64px;
     margin: 0 auto;
   }
   // .experts__title
@@ -42,6 +51,17 @@
     width: 100%;
     @media (min-width: $pc) {
       width: 100%;
+    }
+    &--small {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      @media (min-width: $pc) {
+        font-size: 64px;
+        line-height: 1;
+        letter-spacing: -4px;
+      }
     }
   }
   // .experts__box
